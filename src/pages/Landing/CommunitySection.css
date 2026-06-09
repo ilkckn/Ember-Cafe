@@ -1,0 +1,116 @@
+.community-section-container {
+  width: 100%;
+  background-color: var(--parchment-t95);
+  padding-block: 8rem;
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .com-left {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .image {
+        width: 60%;
+        height: 45rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--copper-t60);
+        transform: skewX(-5deg);
+
+        & > img {
+          width: 85%;
+          transform: skewX(5deg);
+          box-shadow: 5px 12px 10px -3px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .tag {
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-inline: 2.5rem;
+        padding-block: 2rem;
+        border-radius: 1rem;
+        position: absolute;
+        bottom: -3.5rem;
+        right: 7rem;
+
+        & > p {
+          color: var(--secondary-t30);
+          font-size: 1.3rem;
+          font-weight: var(--fw-body-semibold);
+          margin-bottom: 0.5rem;
+        }
+
+        & > p:nth-child(2) {
+          font-size: 1.2rem;
+          font-weight: var(--fw-body-regular);
+          color: var(--secondary-t0);
+        }
+      }
+    }
+
+    .com-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & > h2 {
+        font-size: 3.5rem;
+        font-weight: var(--fw-headline-medium);
+        letter-spacing: -1px;
+        line-height: 4.5rem;
+      }
+
+      & > h2:nth-child(2) {
+        color: var(--secondary-t30);
+        font-style: italic;
+      }
+
+      & > p {
+        width: 90%;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: var(--fw-body-light);
+        letter-spacing: 0.5px;
+        line-height: 2.2rem;
+        color: var(--secondary-t10);
+      }
+
+      .numbers {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+        margin-top: 2.5rem;
+
+        .arabica-beans, .custom-roasts {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+
+          & > p {
+            font-size: 3.3rem;
+            font-weight: var(--fw-body-semibold);
+            color: var(--secondary-t30);
+          }
+
+          & > span {
+            font-size: 1.1rem;
+            font-weight: var(--fw-body-semibold);
+            letter-spacing: .5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

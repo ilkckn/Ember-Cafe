@@ -140,8 +140,21 @@
   --caramel-t90: #fae0c4;
   --caramel-t95: #fdf0e3;
   --caramel-t100: #ffffff;
-}
 
+  /*------Background Copper------*/
+  --copper-t0: #000000;
+  --copper-t10: #180800;
+  --copper-t20: #341402;
+  --copper-t30: #56260a;
+  --copper-t40: #7a3e1c;
+  --copper-t50: #9e5a34;
+  --copper-t60: #c07852;
+  --copper-t70: #d09a76;
+  --copper-t80: #e4bea0;
+  --copper-t90: #f4dfd0;
+  --copper-t95: #faf0e8;
+  --copper-t100: #ffffff;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

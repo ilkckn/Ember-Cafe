@@ -78,6 +78,7 @@
     right: 6rem;
 
     & > p {
+      color: white;
       background-color: var(--primary-t50);
       font-size: 1.3rem;
       font-weight: var(--fw-body-light);

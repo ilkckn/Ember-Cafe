@@ -1,0 +1,7 @@
+.highlights-container {
+  width: 100%;
+  min-height: 30dvh;
+  background-color: var(--cream-t95);
+  padding-block: 8rem;
+  
+}

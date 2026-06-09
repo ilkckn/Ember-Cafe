@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-headline: "Playfair Display", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* Playfair Display weights */
+  --fw-headline-regular: 400;
+  --fw-headline-medium: 500;
+  --fw-headline-semibold: 600;
+  --fw-headline-bold: 700;
+  --fw-headline-extrabold: 800;
+  --fw-headline-black: 900;
+
+  /* Plus Jakarta Sans weights */
+  --fw-body-extralight: 200;
+  --fw-body-light: 300;
+  --fw-body-regular: 400;
+  --fw-body-medium: 500;
+  --fw-body-semibold: 600;
+  --fw-body-bold: 700;
+  --fw-body-extrabold: 800;
+
+  /* ------Primary------ */
+  --primary-t0: #000000;
+  --primary-t10: #2f1500;
+  --primary-t20: #4d2600;
+  --primary-t30: #6e3900;
+  --primary-t40: #904d00;
+  --primary-t50: #b56100;
+  --primary-t60: #d97707;
+  --primary-t70: #fa9129;
+  --primary-t80: #ffb77d;
+  --primary-t90: #ffdcc3;
+  --primary-t95: #ffede3;
+  --primary-t100: #ffffff;
+
+  /* ------Secondary------ */
+  --secondary-t0: #000000;
+  --secondary-t10: #3a0a00;
+  --secondary-t20: #5f1600;
+  --secondary-t30: #842503;
+  --secondary-t40: #a53c19;
+  --secondary-t50: #c6532f;
+  --secondary-t60: #e76c46;
+  --secondary-t70: #ff8b68;
+  --secondary-t80: #ffb59f;
+  --secondary-t90: #ffdbd1;
+  --secondary-t95: #ffede8;
+  --secondary-t1000: #ffffff;
+
+  /* ------Tertiary------ */
+  --tertiary-t0: #000000;
+  --tertiary-t10: #221b00;
+  --tertiary-t20: #3a3000;
+  --tertiary-t30: #534600;
+  --tertiary-t40: #6e5e0d;
+  --tertiary-t50: #887627;
+  --tertiary-t60: #a3903e;
+  --tertiary-t70: #bfab56;
+  --tertiary-t80: #dcc66e;
+  --tertiary-t90: #f9e287;
+  --tertiary-t95: #fff0bf;
+  --tertiary-t100: #ffffff;
+
+  /* ------Neutral------ */
+  --neutral-t0: #000000;
+  --neutral-t10: #1d1c18;
+  --neutral-t20: #32302c;
+  --neutral-t30: #484742;
+  --neutral-t40: #605e59;
+  --neutral-t50: #797771;
+  --neutral-t60: #93908a;
+  --neutral-t70: #aeaba5;
+  --neutral-t80: #cac6bf;
+  --neutral-t90: #e6e2db;
+  --neutral-t95: #f5f0e9;
+  --neutral-t100: #ffffff;
+
+  /*------Background Caramel------*/
+  --linen-t0: #000000;
+  --linen-t10: #16120a;
+  --linen-t20: #30261c;
+  --linen-t30: #4e4234;
+  --linen-t40: #6e6050;
+  --linen-t50: #8e8070;
+  --linen-t60: #ada090;
+  --linen-t70: #c8bdb2;
+  --linen-t80: #ddd5cc;
+  --linen-t90: #ece7e1;
+  --linen-t95: #f5f2ef;
+  --linen-t100: #ffffff;
+
+  /*------Background Cream------*/
+  --cream-t0: #000000;
+  --cream-t10: #2a1a08;
+  --cream-t20: #4a3018;
+  --cream-t30: #6e4e2e;
+  --cream-t40: #96704a;
+  --cream-t50: #b8956e;
+  --cream-t60: #d4b896;
+  --cream-t70: #e8d5b7;
+  --cream-t80: #f5e6d0;
+  --cream-t90: #fdf0df;
+  --cream-t95: #fef9f2;
+  --cream-t100: #ffffff;
+
+  /*------Background Parchment------*/
+  --parchment-t0: #000000;
+  --parchment-t10: #1c1408;
+  --parchment-t20: #382a14;
+  --parchment-t30: #5a4528;
+  --parchment-t40: #7e6642;
+  --parchment-t50: #a08860;
+  --parchment-t60: #bda882;
+  --parchment-t70: #d4c4a4;
+  --parchment-t80: #e4d8c0;
+  --parchment-t90: #f0e8d8;
+  --parchment-t95: #f8f3ec;
+  --parchment-t100: #ffffff;
+
+  /*------Background Caramel------*/
+  --caramel-t0: #000000;
+  --caramel-t10: #200d01;
+  --caramel-t20: #401d06;
+  --caramel-t30: #66300e;
+  --caramel-t40: #8e471c;
+  --caramel-t50: #b46330;
+  --caramel-t60: #d4844a;
+  --caramel-t70: #e9a56c;
+  --caramel-t80: #f3c898;
+  --caramel-t90: #fae0c4;
+  --caramel-t95: #fdf0e3;
+  --caramel-t100: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream-t95);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headline);
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+span {
+  font-family: var(--font-body);
+}
+
+a {
+  font-family: var(--font-body);
+}
+
+button {
+  font-family: var(--font-body);
+}

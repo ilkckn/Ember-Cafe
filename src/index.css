@@ -155,6 +155,7 @@
   --copper-t95: #faf0e8;
   --copper-t100: #ffffff;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -165,7 +166,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--cream-t95);
+  background: var(--cream-t100);
 }
 
 #root {

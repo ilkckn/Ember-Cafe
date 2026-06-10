@@ -1,0 +1,34 @@
+import "./Serenity.css";
+import { MdArrowRightAlt } from "react-icons/md";
+
+const Serenity = () => {
+  return (
+    <section className="serenity-container">
+      <div className="container">
+        <div className="header">
+          <h1>Corner of Serenity</h1>
+          <div className="par-view">
+            <p>Moments from the atmosphere we designed for you</p>
+            <p>
+              view all <MdArrowRightAlt />
+            </p>
+          </div>
+        </div>
+
+        <div className="boxes">
+          <div className="boxes-left">
+            <img src="/landing/serenity-cafe.png" alt="" />
+          </div>
+          
+          <div className="boxes-right">
+            <img src="/landing/serenity-coffee-grinder.jpg" alt="" />
+            <img src="/landing/cafe-armchair.jpg" alt="" />
+            <img src="/landing/coffee-machine.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Serenity;

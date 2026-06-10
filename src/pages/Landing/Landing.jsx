@@ -1,6 +1,8 @@
 import CommunitySection from "./CommunitySection";
 import Highlights from "./Highlights";
 import "./Landing.css";
+import Serenity from "./Serenity";
+import VisitUs from "./VisitUs";
 
 const Landing = () => {
   return (
@@ -35,6 +37,12 @@ const Landing = () => {
         </div>
         <div className="highlights-component">
           <Highlights />
+        </div>
+        <div className="serenity-component">
+          <Serenity />
+        </div>
+        <div className="visit-us-component">
+          <VisitUs />
         </div>
       </div>
     </section>

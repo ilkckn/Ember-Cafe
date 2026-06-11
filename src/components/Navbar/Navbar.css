@@ -63,7 +63,7 @@
             a {
               padding-block: 0.5rem;
               font-size: 1.45rem;
-              font-weight: var(--fw-body-semibold);
+              font-weight: var(--fw-body-medium);
               letter-spacing: 1px;
               text-decoration: none;
               color: var(--primary-t10);

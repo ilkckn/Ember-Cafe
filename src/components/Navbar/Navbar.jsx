@@ -46,29 +46,19 @@ const Navbar = () => {
             <div className="links">
               <ul>
                 <li>
-                  <NavLink to="/" onClick={scrollToTop}>
-                    Home
-                  </NavLink>
+                  <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/menu" onClick={scrollToTop}>
-                    Menu
-                  </NavLink>
+                  <NavLink to="/menu" onClick={scrollToTop}>Menu</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/story" onClick={scrollToTop}>
-                    Story
-                  </NavLink>
+                  <NavLink to="/story" onClick={scrollToTop}>Story</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/gallery" onClick={scrollToTop}>
-                    Gallery
-                  </NavLink>
+                  <NavLink to="/gallery" onClick={scrollToTop}>Gallery</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact" onClick={scrollToTop}>
-                    Contact
-                  </NavLink>
+                  <NavLink to="/contact" onClick={scrollToTop}>Contact</NavLink>
                 </li>
               </ul>
             </div>

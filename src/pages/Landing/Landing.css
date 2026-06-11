@@ -10,7 +10,7 @@
       min-height: 60dvh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding-inline: 4rem;
+      padding-inline: 6rem;
       padding-block: 10rem;
 
       .hero-left {

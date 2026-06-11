@@ -1,0 +1,295 @@
+.curated-selection-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 6rem;
+  padding-inline: 10rem;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > p {
+      font-size: 2rem;
+      font-weight: var(--fw-body-medium);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--secondary-t30);
+      margin-bottom: 1.5rem;
+    }
+
+    & > h1 {
+      font-size: 2.8rem;
+      font-weight: var(--fw-headline-semibold);
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+      color: var(--primary-t40);
+    }
+  }
+
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--neutral-t95);
+      padding-inline: 4rem;
+      padding-block: 4rem;
+      min-height: 10rem;
+      margin-top: 5rem;
+      border-radius: 2.5rem;
+      transition: all 0.4s ease-in-out;
+
+      .image {
+        width: 100%;
+        height: 45rem;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        border-radius: 2rem;
+        transition: all 0.4s ease-in-out;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 2rem;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      .info {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        & > h2 {
+          font-size: 2.3rem;
+          font-weight: var(--fw-headline-light);
+          letter-spacing: -0.2px;
+          color: var(--primary-t40);
+        }
+
+        & > p {
+          font-size: 1.5rem;
+          font-weight: var(--fw-body-light);
+          line-height: 2.2rem;
+          letter-spacing: 0.5px;
+          margin-bottom: 1rem;
+        }
+
+        .price-detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 1rem;
+
+          & > p {
+            font-size: 1.5rem;
+            font-weight: var(--fw-body-bold);
+            letter-spacing: -0.4px;
+            color: var(--secondary-t40);
+          }
+
+          & > button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            color: var(--tertiary-t40);
+            cursor: pointer;
+
+            & > svg {
+              transform: translateY(0.2rem);
+            }
+          }
+        }
+      }
+
+      &:hover .image img {
+        transform: scale(1.05);
+      }
+
+      &:hover {
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+/* ════════════════════════════════════════════════
+   CURATEDSELECTION.CSS — RESPONSIVE
+   Bu blokları mevcut CuratedSelection.css dosyanın EN ALTINA ekle.
+   ════════════════════════════════════════════════ */
+
+/* ─── 1024px ve altı — Tablet yatay ─────────────── */
+@media (max-width: 1024px) {
+  .curated-selection-container {
+    padding-block: 6rem;
+    padding-inline: 5rem;
+  }
+
+  .curated-selection-container .content {
+    gap: 2.5rem;
+  }
+
+  .curated-selection-container .content .box {
+    padding-inline: 3rem;
+    padding-block: 3rem;
+    margin-top: 4rem;
+  }
+
+  .curated-selection-container .content .box .image {
+    height: 38rem;
+  }
+}
+
+/* ─── 820px ─────────────────────────────────────── */
+@media (max-width: 820px) {
+  .curated-selection-container {
+    padding-block: 5rem;
+    padding-inline: 3rem;
+  }
+
+  .curated-selection-container .header > p {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+  }
+
+  .curated-selection-container .header > h1 {
+    font-size: 2.5rem;
+  }
+
+  .curated-selection-container .content .box .image {
+    height: 34rem;
+  }
+
+  .curated-selection-container .content .box .info > h2 {
+    font-size: 2.1rem;
+  }
+}
+
+/* ─── 768px — İki kart alt alta ─────────────────── */
+@media (max-width: 768px) {
+  .curated-selection-container {
+    padding-inline: 2.5rem;
+  }
+
+  /* Grid tek kolona düşer */
+  .curated-selection-container .content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .curated-selection-container .content .box {
+    margin-top: 3rem;
+  }
+
+  .curated-selection-container .content .box .image {
+    height: 40rem;
+  }
+}
+
+/* ─── 430px — Büyük mobil ───────────────────────── */
+@media (max-width: 430px) {
+  .curated-selection-container {
+    padding-block: 4rem;
+    padding-inline: 1.8rem;
+  }
+
+  .curated-selection-container .header > p {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .curated-selection-container .header > h1 {
+    font-size: 2.3rem;
+  }
+
+  .curated-selection-container .content .box {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .curated-selection-container .content .box .image {
+    height: 32rem;
+  }
+
+  .curated-selection-container .content .box .info {
+    margin-top: 1.5rem;
+  }
+
+  .curated-selection-container .content .box .info > h2 {
+    font-size: 2.1rem;
+  }
+
+  .curated-selection-container .content .box .info > p {
+    font-size: 1.55rem;
+    line-height: 2.2rem;
+  }
+
+  .curated-selection-container .content .box .info .price-detail > p {
+    font-size: 1.6rem;
+  }
+
+  .curated-selection-container .content .box .info .price-detail > button {
+    font-size: 1.45rem;
+  }
+}
+
+/* ─── 414px ─────────────────────────────────────── */
+@media (max-width: 414px) {
+  .curated-selection-container .content .box .image {
+    height: 30rem;
+  }
+}
+
+/* ─── 390px ─────────────────────────────────────── */
+@media (max-width: 390px) {
+  .curated-selection-container {
+    padding-inline: 1.5rem;
+  }
+
+  .curated-selection-container .header > h1 {
+    font-size: 2.2rem;
+  }
+
+  .curated-selection-container .content .box .image {
+    height: 28rem;
+  }
+
+  .curated-selection-container .content .box .info > h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ─── 375px ─────────────────────────────────────── */
+@media (max-width: 375px) {
+  .curated-selection-container {
+    padding-inline: 1.4rem;
+  }
+
+  .curated-selection-container .content .box {
+    padding-inline: 1.8rem;
+  }
+
+  .curated-selection-container .content .box .info > p {
+    font-size: 1.5rem;
+  }
+}

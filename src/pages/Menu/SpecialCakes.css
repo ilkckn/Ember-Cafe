@@ -1,0 +1,486 @@
+.special-cakes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 8rem;
+  padding-inline: 4rem;
+  background-color: var(--neutral-t95);
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > p {
+      font-size: 2rem;
+      font-weight: var(--fw-body-medium);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--secondary-t30);
+      margin-bottom: 1.5rem;
+    }
+
+    & > h1 {
+      font-size: 2.8rem;
+      font-weight: var(--fw-headline-semibold);
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+      color: var(--primary-t40);
+    }
+  }
+
+  .special-cakes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding-top: 6rem;
+    transition: all 0.3s ease-in-out;
+
+    .cake-left {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      background-color: var(--cream-t95);
+      border-radius: 1.5rem;
+      transition: all 0.3s ease-in-out;
+
+      .box-left {
+        width: 100%;
+        height: 40rem;
+        background-color: var(--neutral-t100);
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        overflow: hidden;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: right;
+          border-top-left-radius: 1.5rem;
+          border-bottom-left-radius: 1.5rem;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .box-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding-inline: 3.5rem;
+        padding-block: 3rem;
+
+        & > p {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          color: var(--secondary-t30);
+
+          & > svg {
+            font-size: 2rem;
+          }
+        }
+
+        & > h1 {
+          font-size: 2.5rem;
+          font-weight: var(--fw-headline-);
+          letter-spacing: -0.1px;
+          text-transform: capitalize;
+          text-wrap: balance;
+        }
+
+        & > p:nth-child(3) {
+          width: 100%;
+          text-wrap: balance;
+          font-size: 1.5rem;
+          font-weight: var(--fw-body-light);
+          color: var(--secondary-t100);
+          line-height: 2.5rem;
+          letter-spacing: 0.5px;
+          text-transform: inherit;
+        }
+
+        .price-order {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 2rem;
+
+          & > p {
+            font-size: 1.7rem;
+            font-weight: var(--fw-body-semibold);
+            letter-spacing: -0.5px;
+            color: var(--secondary-t40);
+          }
+
+          & > button {
+            border: none;
+            background-color: transparent;
+            color: var(--secondary-t40);
+            font-size: 1.5rem;
+            font-weight: var(--fw-body-medium);
+            text-transform: capitalize;
+            border-bottom: 1px solid var(--secondary-t40);
+            padding-bottom: 0.3rem;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      &:hover > .box-left > img {
+        transform: scale(1.05);
+      }
+
+      &:hover .box-right h1 {
+        color: var(--primary-t30);
+      }
+    }
+
+    .cake-right {
+      background-color: var(--cream-t95);
+      padding-inline: 4rem;
+      padding-block: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      position: relative;
+      border-radius: 1.5rem;
+      border: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
+
+      .name-desc-tags {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > h1 {
+          font-size: 2.4rem;
+          font-weight: var(--fw-headline-light);
+          letter-spacing: 0.5px;
+        }
+
+        & > p {
+          font-size: 1.5rem;
+          font-weight: var(--fw-body-light);
+          line-height: 2.3rem;
+          letter-spacing: 0.5px;
+          text-wrap: balance;
+          margin-top: 0.5rem;
+        }
+
+        .tags {
+          width: fit-content;
+          padding-inline: 1.5rem;
+          padding-block: 0.5rem;
+          border-radius: 3rem;
+          font-size: 1.1rem;
+          font-weight: var(--fw-body-extralight);
+          text-transform: capitalize;
+          background-color: var(--tag-color);
+          margin-top: 1.5rem;
+        }
+      }
+
+      .price-nextBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > p {
+          font-size: 1.7rem;
+          font-weight: var(--fw-body-semibold);
+          color: var(--secondary-t40);
+          letter-spacing: -0.5px;
+        }
+
+        & > button {
+          border: none;
+          background-color: transparent;
+          font-size: 2.5rem;
+          color: var(--secondary-t20);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-t40);
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      &:hover {
+        border: 1px solid var(--primary-t40);
+      }
+    }
+  }
+}
+
+/* ════════════════════════════════════════════════
+   SPECIALCAKES.CSS — RESPONSIVE
+   Bu blokları mevcut SpecialCakes.css dosyanın EN ALTINA ekle.
+   ════════════════════════════════════════════════ */
+
+/* ─── 1024px ve altı — Tablet yatay ─────────────── */
+@media (max-width: 1024px) {
+  .special-cakes-container {
+    padding-block: 6rem;
+    padding-inline: 3rem;
+  }
+
+  .special-cakes-container .special-cakes {
+    gap: 3rem;
+    padding-top: 5rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-left {
+    height: 38rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right {
+    padding-inline: 2.5rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right {
+    padding-inline: 3rem;
+  }
+}
+
+/* ─── 820px — Grid tek kolona düşer ─────────────── */
+@media (max-width: 820px) {
+  .special-cakes-container {
+    padding-block: 5rem;
+    padding-inline: 2.5rem;
+  }
+
+  .special-cakes-container .header > p {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+  }
+
+  .special-cakes-container .header > h1 {
+    font-size: 2.6rem;
+  }
+
+  /* Ana grid: iki kart alt alta */
+  .special-cakes-container .special-cakes {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 4rem;
+  }
+
+  /* Sol kart içi: görsel + bilgi yan yana kalır (geniş tablet) */
+  .special-cakes-container .special-cakes .cake-left {
+    grid-template-columns: 5fr 4fr;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-left {
+    height: 40rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right {
+    min-height: 28rem;
+  }
+}
+
+/* ─── 768px ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .special-cakes-container {
+    padding-inline: 2.5rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right > h1 {
+    font-size: 2.3rem;
+  }
+
+  .special-cakes-container
+    .special-cakes
+    .cake-left
+    .box-right
+    > p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+}
+
+/* ─── 430px — Büyük mobil ───────────────────────── */
+@media (max-width: 430px) {
+  .special-cakes-container {
+    padding-block: 4rem;
+    padding-inline: 1.8rem;
+  }
+
+  .special-cakes-container .header > p {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .special-cakes-container .header > h1 {
+    font-size: 2.4rem;
+  }
+
+  .special-cakes-container .special-cakes {
+    gap: 2.5rem;
+    padding-top: 3.5rem;
+  }
+
+  /* Sol kart: görsel üstte, bilgi altta (tek kolon) */
+  .special-cakes-container .special-cakes .cake-left {
+    grid-template-columns: 1fr;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-left {
+    height: 32rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-left > img {
+    object-position: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right {
+    padding-inline: 2.5rem;
+    padding-block: 2.5rem;
+    gap: 1rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right > p {
+    font-size: 1.4rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right > h1 {
+    font-size: 2.3rem;
+  }
+
+  .special-cakes-container
+    .special-cakes
+    .cake-left
+    .box-right
+    > p:nth-child(3) {
+    font-size: 1.55rem;
+    line-height: 2.3rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right .price-order {
+    margin-top: 1.5rem;
+  }
+
+  .special-cakes-container
+    .special-cakes
+    .cake-left
+    .box-right
+    .price-order
+    > p {
+    font-size: 1.7rem;
+  }
+
+  .special-cakes-container
+    .special-cakes
+    .cake-left
+    .box-right
+    .price-order
+    > button {
+    font-size: 1.5rem;
+  }
+
+  /* Sağ önizleme kartı */
+  .special-cakes-container .special-cakes .cake-right {
+    padding-inline: 2.5rem;
+    padding-block: 2.5rem;
+    min-height: 24rem;
+    gap: 2rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .name-desc-tags > h1 {
+    font-size: 2.2rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .name-desc-tags > p {
+    font-size: 1.55rem;
+    line-height: 2.2rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .name-desc-tags .tags {
+    font-size: 1.15rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .price-nextBtn > p {
+    font-size: 1.7rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .price-nextBtn > button {
+    font-size: 2.4rem;
+  }
+}
+
+/* ─── 414px ─────────────────────────────────────── */
+@media (max-width: 414px) {
+  .special-cakes-container .special-cakes .cake-left .box-left {
+    height: 30rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ─── 390px ─────────────────────────────────────── */
+@media (max-width: 390px) {
+  .special-cakes-container {
+    padding-inline: 1.5rem;
+  }
+
+  .special-cakes-container .header > h1 {
+    font-size: 2.2rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-left {
+    height: 28rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right {
+    padding-inline: 2rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right {
+    padding-inline: 2rem;
+  }
+}
+
+/* ─── 375px ─────────────────────────────────────── */
+@media (max-width: 375px) {
+  .special-cakes-container {
+    padding-inline: 1.4rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-left .box-right > h1 {
+    font-size: 2.1rem;
+  }
+
+  .special-cakes-container
+    .special-cakes
+    .cake-left
+    .box-right
+    > p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .name-desc-tags > h1 {
+    font-size: 2.1rem;
+  }
+
+  .special-cakes-container .special-cakes .cake-right .name-desc-tags > p {
+    font-size: 1.5rem;
+  }
+}

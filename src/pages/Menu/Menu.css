@@ -1,0 +1,518 @@
+.menu-container {
+  width: 100%;
+  min-height: 40dvh;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-block: 8rem;
+  padding-inline: 4rem;
+  background-color: var(--cream-t95);
+
+  .container {
+    width: 100%;
+
+    .header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+
+      & > p:nth-child(1) {
+        font-size: 1.7rem;
+        font-weight: var(--fw-body-medium);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--primary-t40);
+      }
+
+      & > h1 {
+        font-size: 6rem;
+        font-weight: var(--fw-headline-bold);
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: var(--primary-t40);
+      }
+
+      & > p:nth-child(3) {
+        margin-top: 1rem;
+        max-width: 58ch;
+        font-size: 1.6rem;
+        font-weight: var(--fw-body-light);
+        line-height: 2.7rem;
+        letter-spacing: 1px;
+        color: var(--primary-t10);
+      }
+    }
+
+    .filter-menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 15rem;
+
+      .filter-btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        border-bottom: 1px solid var(--neutral-t90);
+
+        .filter {
+          display: flex;
+          align-items: center;
+
+          & > button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.4rem;
+            letter-spacing: -0.1px;
+            color: var(--primary-t10);
+            text-transform: uppercase;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+
+            &.active {
+              color: var(--primary-t50);
+              border-bottom-color: var(--primary-t30);
+            }
+
+            &:hover {
+              color: var(--primary-t60);
+            }
+          }
+        }
+      }
+
+      .menu {
+        width: 100%;
+        padding-inline: 4rem;
+        padding-block: 6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+
+        .image {
+          width: 100%;
+          height: 70rem;
+          aspect-ratio: 1 / 1;
+          box-shadow: 3px 15px 30px 5px rgba(0, 0, 0, 0.2);
+          border-radius: 2rem;
+
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+          }
+        }
+
+        .items {
+          display: flex;
+          flex-direction: column;
+
+          & > h1 {
+            font-size: 3.1rem;
+            font-weight: var(--fw-headline-medium);
+            letter-spacing: -0.5px;
+            color: var(--primary-t20);
+          }
+
+          & > p {
+            font-size: 1.6rem;
+            font-weight: var(--fw-body-light);
+            letter-spacing: 0.5px;
+            color: var(--primary-t10);
+            margin-top: 0.5rem;
+            padding-bottom: 3rem;
+            border-bottom: 2px solid var(--cream-t80);
+          }
+
+          .menu-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding-block: 3rem;
+
+            .item {
+              display: flex;
+              flex-direction: column;
+
+              .name-price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & > p {
+                  font-family: var(--font-headline);
+                  font-size: 2rem;
+                  font-weight: var(--fw-body-medium);
+                  letter-spacing: 1px;
+                  color: var(--primary-t10);
+                }
+
+                & > p:nth-child(2) {
+                  font-family: var(--font-body);
+                  font-size: 1.7rem;
+                  font-weight: var(--fw-body-semibold);
+                  letter-spacing: -0.3px;
+                  color: var(--secondary-t30);
+                }
+              }
+
+              & > p {
+                font-size: 1.4rem;
+                font-weight: var(--fw-body-light);
+                letter-spacing: 0.5px;
+                color: var(--primary-t10);
+                margin-top: 0.5rem;
+              }
+
+              .tags {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                & > p {
+                  font-size: 1rem;
+                  font-weight: var(--fw-body-regular);
+                  letter-spacing: 0.5px;
+                  text-transform: uppercase;
+                  color: var(--primary-t10);
+                  background-color: #f1e9d3;
+                  padding-inline: 2rem;
+                  padding-block: 0.5rem;
+                  border-radius: 2rem;
+                  margin-top: 1.5rem;
+
+                  & > svg {
+                    transform: translateY(0.5px);
+                    margin-right: 0.3rem;
+                  }
+                }
+
+                & > p:nth-child(2) {
+                  background-color: #f6ead9;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ════════════════════════════════════════════════
+   MENU.CSS — RESPONSIVE
+   Bu blokları mevcut Menu.css dosyanın EN ALTINA ekle.
+   (.menu-container { ... } bloğunun dışına, dosyanın sonuna)
+   ════════════════════════════════════════════════ */
+
+/* ─── 1024px ve altı — Tablet yatay ─────────────── */
+@media (max-width: 1024px) {
+  .menu-container {
+    padding-block: 6rem;
+    padding-inline: 3rem;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 4.8rem;
+  }
+
+  .menu-container .container .header > p:nth-child(3) {
+    max-width: 52ch;
+    font-size: 1.6rem;
+  }
+
+  .menu-container .container .filter-menu {
+    margin-top: 10rem;
+  }
+
+  .menu-container .container .filter-menu .filter-btns {
+    gap: 2.5rem;
+  }
+
+  .menu-container .container .filter-menu .menu {
+    padding-inline: 2rem;
+    padding-block: 5rem;
+    gap: 4rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 55rem;
+  }
+}
+
+/* ─── 820px — Tablet dikey (geniş) ──────────────── */
+@media (max-width: 820px) {
+  .menu-container {
+    padding-block: 5rem;
+    padding-inline: 2.5rem;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 4.2rem;
+  }
+
+  .menu-container .container .header > p:nth-child(3) {
+    max-width: 90%;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .menu-container .container .filter-menu {
+    margin-top: 7rem;
+  }
+
+  .menu-container .container .filter-menu .filter-btns {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .menu-container .container .filter-menu .filter-btns .filter > button {
+    font-size: 1.4rem;
+  }
+
+  /* Grid tek kolona düşer — görsel üstte, içerik altta */
+  .menu-container .container .filter-menu .menu {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-inline: 0;
+    padding-block: 4rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 50rem;
+    order: -1; /* görsel her zaman üstte */
+  }
+}
+
+/* ─── 768px — Tablet dikey ──────────────────────── */
+@media (max-width: 768px) {
+  .menu-container {
+    padding-inline: 2.5rem;
+  }
+
+  .menu-container .container .header > p:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 3.8rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 45rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items > h1 {
+    font-size: 2.8rem;
+  }
+
+  .menu-container
+    .container
+    .filter-menu
+    .menu
+    .items
+    .menu-item
+    .item
+    .name-price
+    > p {
+    font-size: 1.9rem;
+  }
+}
+
+/* ─── 430px — Büyük mobil (iPhone Pro Max) ──────── */
+@media (max-width: 430px) {
+  .menu-container {
+    padding-block: 4rem;
+    padding-inline: 1.8rem;
+  }
+
+  .menu-container .container .header {
+    gap: 0.8rem;
+  }
+
+  .menu-container .container .header > p:nth-child(1) {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 3.4rem;
+  }
+
+  .menu-container .container .header > p:nth-child(3) {
+    max-width: 100%;
+    font-size: 1.55rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.5px;
+  }
+
+  .menu-container .container .filter-menu {
+    margin-top: 5rem;
+  }
+
+  /* Filtre butonları yatay kaydırılabilir olsun */
+  .menu-container .container .filter-menu .filter-btns {
+    gap: 1.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu-container .container .filter-menu .filter-btns::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-container .container .filter-menu .filter-btns .filter {
+    flex-shrink: 0;
+  }
+
+  .menu-container .container .filter-menu .filter-btns .filter > button {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+  }
+
+  .menu-container .container .filter-menu .menu {
+    gap: 3rem;
+    padding-block: 3.5rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 36rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items > h1 {
+    font-size: 2.6rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items > p {
+    font-size: 1.55rem;
+    padding-bottom: 2rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items .menu-item {
+    gap: 2.5rem;
+    padding-block: 2.5rem;
+  }
+
+  .menu-container
+    .container
+    .filter-menu
+    .menu
+    .items
+    .menu-item
+    .item
+    .name-price
+    > p {
+    font-size: 1.8rem;
+  }
+
+  .menu-container
+    .container
+    .filter-menu
+    .menu
+    .items
+    .menu-item
+    .item
+    .name-price
+    > p:nth-child(2) {
+    font-size: 1.7rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items .menu-item .item > p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+
+  .menu-container
+    .container
+    .filter-menu
+    .menu
+    .items
+    .menu-item
+    .item
+    .tags
+    > p {
+    font-size: 1.1rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+/* ─── 414px — iPhone Plus ───────────────────────── */
+@media (max-width: 414px) {
+  .menu-container .container .header > h1 {
+    font-size: 3.2rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 34rem;
+  }
+}
+
+/* ─── 390px — iPhone standart ────────────────────── */
+@media (max-width: 390px) {
+  .menu-container {
+    padding-inline: 1.5rem;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 3rem;
+  }
+
+  .menu-container .container .header > p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 32rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items > h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* ─── 375px — iPhone SE / mini ──────────────────── */
+@media (max-width: 375px) {
+  .menu-container {
+    padding-inline: 1.4rem;
+  }
+
+  .menu-container .container .header > h1 {
+    font-size: 2.8rem;
+  }
+
+  .menu-container .container .filter-menu .filter-btns .filter > button {
+    font-size: 1.35rem;
+  }
+
+  .menu-container .container .filter-menu .menu .image {
+    height: 30rem;
+  }
+
+  .menu-container
+    .container
+    .filter-menu
+    .menu
+    .items
+    .menu-item
+    .item
+    .name-price
+    > p {
+    font-size: 1.7rem;
+  }
+
+  .menu-container .container .filter-menu .menu .items .menu-item .item > p {
+    font-size: 1.5rem;
+  }
+}

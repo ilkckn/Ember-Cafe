@@ -8,10 +8,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  useEffect(() => {
     const handleReSize = () => {
       if (window.innerWidth > 1024) {
         setIsMenuOpen(false);
@@ -21,6 +17,10 @@ const Navbar = () => {
     window.addEventListener("resize", handleReSize);
     return () => window.removeEventListener("resize", handleReSize);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,19 +46,29 @@ const Navbar = () => {
             <div className="links">
               <ul>
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/" onClick={scrollToTop}>
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/menu">Menu</NavLink>
+                  <NavLink to="/menu" onClick={scrollToTop}>
+                    Menu
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/story">Story</NavLink>
+                  <NavLink to="/story" onClick={scrollToTop}>
+                    Story
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/gallery">Gallery</NavLink>
+                  <NavLink to="/gallery" onClick={scrollToTop}>
+                    Gallery
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact">Contact</NavLink>
+                  <NavLink to="/contact" onClick={scrollToTop}>
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -80,19 +90,29 @@ const Navbar = () => {
                     <div className="mobile-links">
                       <ul>
                         <li>
-                          <NavLink to="/" onClick={handleClose}>Home</NavLink>
+                          <NavLink to="/" onClick={handleClose}>
+                            Home
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/menu" onClick={handleClose}>Menu</NavLink>
+                          <NavLink to="/menu" onClick={handleClose}>
+                            Menu
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/story" onClick={handleClose}>Story</NavLink>
+                          <NavLink to="/story" onClick={handleClose}>
+                            Story
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/gallery" onClick={handleClose}>Gallery</NavLink>
+                          <NavLink to="/gallery" onClick={handleClose}>
+                            Gallery
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/contact" onClick={handleClose}>Contact</NavLink>
+                          <NavLink to="/contact" onClick={handleClose}>
+                            Contact
+                          </NavLink>
                         </li>
                       </ul>
                     </div>

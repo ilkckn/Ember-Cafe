@@ -188,7 +188,7 @@
         }
       }
 
-      .price-nextBtn {
+      .price-next-prev-btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -200,17 +200,23 @@
           letter-spacing: -0.5px;
         }
 
-        & > button {
-          border: none;
-          background-color: transparent;
-          font-size: 2.5rem;
-          color: var(--secondary-t20);
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
+        .next-prev-btns {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
 
-          &:hover {
-            color: var(--secondary-t40);
-            transform: scale(1.2);
+          & > button {
+            border: none;
+            background-color: transparent;
+            font-size: 2.5rem;
+            color: var(--secondary-t20);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: var(--secondary-t40);
+              transform: scale(1.2);
+            }
           }
         }
       }

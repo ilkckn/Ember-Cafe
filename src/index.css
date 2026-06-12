@@ -57,7 +57,7 @@
   --secondary-t80: #ffb59f;
   --secondary-t90: #ffdbd1;
   --secondary-t95: #ffede8;
-  --secondary-t1000: #ffffff;
+  --secondary-t100: #ffffff;
 
   /* ------Tertiary------ */
   --tertiary-t0: #000000;
@@ -156,6 +156,19 @@
   --copper-t90: #f4dfd0;
   --copper-t95: #faf0e8;
   --copper-t100: #ffffff;
+
+  /*------Background Ember------*/
+  --ember-t0: #fef1ed;
+  --ember-t10: #fddacf;
+  --ember-t20: #fdc2b0;
+  --ember-t30: #fcaa91;
+  --ember-t40: #fb9272;
+  --ember-t50: #fb7a54; /* base */
+  --ember-t60: #f9501c;
+  --ember-t70: #d83605;
+  --ember-t80: #a02803;
+  --ember-t90: #681a02;
+  --ember-t100: #310c01;
 }
 
 html {

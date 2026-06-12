@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SpecialCakes.css";
 import menuData from "./MenuData.js";
 import { RiMedalLine } from "react-icons/ri";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight,FiArrowLeft } from "react-icons/fi";
 
 const SpecialCakes = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,11 +59,16 @@ const SpecialCakes = () => {
               ))}
             </div>
           </div>
-          <div className="price-nextBtn">
+          <div className="price-next-prev-btn">
             <p>€ {nextCake.price}</p>
-            <button onClick={handleNext}>
-              <FiArrowRight />
-            </button>
+            <div className="next-prev-btns">
+              <button onClick={handlePrev}>
+                <FiArrowLeft />
+              </button>
+              <button onClick={handleNext}>
+                <FiArrowRight />
+              </button>
+            </div>
           </div>
         </div>
       </div>

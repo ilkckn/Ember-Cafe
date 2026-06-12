@@ -288,7 +288,8 @@ export const menuData = {
       price: 8.5,
       priceUnit: "/ slice",
       orderWhole: false,
-      image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop",
       tags: ["seasonal"],
       featured: false,
       available: true,
@@ -319,6 +320,8 @@ export const menuData = {
       price: 9.0,
       priceUnit: "/ slice",
       orderWhole: true,
+      image:
+        "https://images.unsplash.com/photo-1727056353548-128931097fc3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tags: [],
       featured: false,
       available: true,

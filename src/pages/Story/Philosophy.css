@@ -1,0 +1,438 @@
+.philosophy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60dvh;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 4rem;
+  padding-block: 8rem;
+  background-color: var(--neutral-t20);
+  position: relative;
+  overflow: hidden;
+
+  & > h1 {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    font-size: 20rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 10px;
+    line-height: 16rem;
+    text-transform: uppercase;
+    color: var(--neutral-t80);
+    opacity: 0.1;
+  }
+
+  .header {
+    margin-top: 4rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    & > p {
+      font-size: 1.7rem;
+      font-weight: var(--fw-body-bold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--secondary-t90);
+    }
+
+    & > h1 {
+      margin-top: 1rem;
+      font-size: 3rem;
+      font-weight: var(--fw-headline-semibold);
+      letter-spacing: -0.1px;
+      color: var(--cream-t95);
+      text-align: center;
+    }
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 7rem;
+    position: relative;
+
+    .image {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: all 0.3s ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 96%;
+        height: 94%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .info {
+      position: absolute;
+      z-index: 2;
+      width: 50%;
+      right: 0;
+      height: 35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 4rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(1px);
+
+      & > h2 {
+        font-size: 2.5rem;
+        font-weight: var(--fw-headline-medium);
+        letter-spacing: -0.1px;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+        color: var(--primary-t80);
+      }
+
+      & > p {
+        font-size: 1.6rem;
+        font-weight: var(--fw-body-extralight);
+        letter-spacing: 0.5px;
+        line-height: 2.4rem;
+        color: var(--neutral-t90);
+      }
+
+      .tags {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > p {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.2rem;
+          font-weight: var(--fw-body-semibold);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: var(--secondary-t90);
+        }
+      }
+    }
+
+    &:hover .image {
+      filter: grayscale(0%);
+      transform: translateY(-1rem);
+    }
+
+    &:hover .image::after {
+      opacity: 1;
+    }
+  }
+}
+
+/* ===== 1024px and below ===== */
+@media (max-width: 1024px) {
+  .philosophy-container {
+    padding-inline: 3rem;
+    padding-block: 6rem;
+
+    & > h1 {
+      font-size: 15rem;
+      line-height: 12rem;
+    }
+
+    .header {
+      margin-top: 2rem;
+
+      & > h1 {
+        font-size: 2.6rem;
+      }
+    }
+
+    .content {
+      margin-top: 5rem;
+
+      .image {
+        height: 50rem;
+      }
+
+      .info {
+        width: 55%;
+        height: 32rem;
+        padding-inline: 3rem;
+
+        & > h2 {
+          font-size: 2.2rem;
+        }
+
+        & > p {
+          font-size: 1.5rem;
+          line-height: 2.3rem;
+        }
+      }
+    }
+  }
+}
+
+/* ===== 820px and below ===== */
+@media (max-width: 820px) {
+  .philosophy-container {
+    padding-inline: 2.5rem;
+    padding-block: 5rem;
+    min-height: auto;
+
+    & > h1 {
+      font-size: 11rem;
+      line-height: 9rem;
+      top: 1.5rem;
+    }
+
+    .header {
+      & > p {
+        font-size: 1.6rem;
+      }
+
+      & > h1 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+
+    .content {
+      flex-direction: column;
+      margin-top: 4rem;
+
+      .image {
+        height: 45rem;
+      }
+
+      .info {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 3rem 2.5rem;
+        margin-top: 0;
+        background-color: var(--neutral-t30);
+        backdrop-filter: none;
+
+        & > h2 {
+          font-size: 2.2rem;
+          margin-bottom: 1.2rem;
+        }
+
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+
+        .tags {
+          margin-top: 1.8rem;
+          gap: 1.2rem;
+
+          & > p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      &:hover .image {
+        transform: none;
+      }
+    }
+  }
+}
+
+/* ===== 768px and below ===== */
+@media (max-width: 768px) {
+  .philosophy-container {
+    padding-inline: 2rem;
+    padding-block: 4.5rem;
+
+    & > h1 {
+      font-size: 9rem;
+      line-height: 7.5rem;
+    }
+
+    .header {
+      margin-top: 1rem;
+
+      & > h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .content {
+      margin-top: 3.5rem;
+
+      .image {
+        height: 40rem;
+      }
+    }
+  }
+}
+
+/* ===== 430px and below ===== */
+@media (max-width: 430px) {
+  .philosophy-container {
+    padding-inline: 1.5rem;
+    padding-block: 4rem;
+
+    & > h1 {
+      font-size: 6rem;
+      line-height: 5.5rem;
+      letter-spacing: 5px;
+      top: 1rem;
+    }
+
+    .header {
+      margin-top: 0.5rem;
+
+      & > p {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+      }
+
+      & > h1 {
+        font-size: 2rem;
+        margin-top: 0.8rem;
+      }
+    }
+
+    .content {
+      margin-top: 3rem;
+
+      .image {
+        height: 30rem;
+      }
+
+      .info {
+        padding: 2.5rem 1.8rem;
+
+        & > h2 {
+          font-size: 1.9rem;
+          margin-bottom: 1rem;
+        }
+
+        & > p {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+        }
+
+        .tags {
+          margin-top: 1.5rem;
+          gap: 1rem;
+
+          & > p {
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===== 414px and below ===== */
+@media (max-width: 414px) {
+  .philosophy-container {
+    .content {
+      .image {
+        height: 28rem;
+      }
+    }
+  }
+}
+
+/* ===== 390px and below ===== */
+@media (max-width: 390px) {
+  .philosophy-container {
+    padding-inline: 1.3rem;
+
+    & > h1 {
+      font-size: 5.5rem;
+      line-height: 5rem;
+    }
+
+    .header > h1 {
+      font-size: 1.9rem;
+    }
+
+    .content {
+      .image {
+        height: 26rem;
+      }
+
+      .info {
+        padding: 2.2rem 1.5rem;
+
+        & > p {
+          font-size: 1.45rem;
+          line-height: 2.1rem;
+        }
+      }
+    }
+  }
+}
+
+/* ===== 375px and below ===== */
+@media (max-width: 375px) {
+  .philosophy-container {
+    padding-inline: 1.2rem;
+    padding-block: 3.5rem;
+
+    & > h1 {
+      font-size: 5rem;
+      line-height: 4.5rem;
+      letter-spacing: 3px;
+    }
+
+    .header {
+      & > p {
+        font-size: 1.4rem;
+      }
+
+      & > h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .content {
+      margin-top: 2.5rem;
+
+      .image {
+        height: 24rem;
+      }
+
+      .info {
+        padding: 2rem 1.3rem;
+
+        & > h2 {
+          font-size: 1.8rem;
+        }
+
+        & > p {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+
+        .tags > p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 .join-our-table-container {
   width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
   min-height: 40dvh;
   padding-inline: 4rem;
   padding-block: 8rem;

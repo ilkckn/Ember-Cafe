@@ -60,7 +60,6 @@
     position: relative;
 
     .image {
-      width: 100%;
       filter: grayscale(100%);
       transition: all 0.3s ease-in-out;
 

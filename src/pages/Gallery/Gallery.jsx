@@ -1,5 +1,5 @@
+import "./Gallery-module.css";
 import { useNavigate } from "react-router-dom";
-import "./Gallery.css";
 import { FaAngleDown } from "react-icons/fa6";
 import Ritual from "./Ritual";
 import Treats from "./Treats";

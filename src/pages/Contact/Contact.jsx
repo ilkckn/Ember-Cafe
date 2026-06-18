@@ -1,11 +1,12 @@
 import "./Contact.css";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { TiArrowRight } from "react-icons/ti";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
-import { useEffect } from "react";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -51,7 +52,7 @@ const Contact = () => {
           <p>visiting us?</p>
           <p>123 Artisanal Alley, Roasted District</p>
           <p>Portland, OR 97201</p>
-          <button>
+          <button onClick={() => navigate("/find-your-cafe")}>
             get directions <TiArrowRight />
           </button>
         </div>

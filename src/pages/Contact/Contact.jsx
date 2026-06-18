@@ -4,7 +4,6 @@ import { TiArrowRight } from "react-icons/ti";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { useEffect } from "react";
-import { TbTimeDuration45 } from "react-icons/tb";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);

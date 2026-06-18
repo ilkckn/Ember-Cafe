@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
 import { FaAngleDown } from "react-icons/fa6";
 import Ritual from "./Ritual";
@@ -6,6 +7,8 @@ import Experience from "./Experience";
 import FindYourTable from "./FindYourTable";
 
 const Gallery = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="gallery-container">
       <div className="container">
@@ -19,7 +22,7 @@ const Gallery = () => {
             Step into our world of hand-roasted aromas and warm terracotta
             walls. Every corner tells a story of artisanal passion.
           </p>
-          <button className="explore">
+          <button className="explore" onClick={() => navigate("/story")}>
             explore
             <FaAngleDown />
           </button>

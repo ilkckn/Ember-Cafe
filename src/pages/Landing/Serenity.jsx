@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./Serenity.css";
 import { MdArrowRightAlt } from "react-icons/md";
 
 const Serenity = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="serenity-container">
       <div className="container">
@@ -9,7 +12,7 @@ const Serenity = () => {
           <h1>Corner of Serenity</h1>
           <div className="par-view">
             <p>Moments from the atmosphere we designed for you</p>
-            <p>
+            <p onClick={() => navigate("/gallery")}>
               view all <MdArrowRightAlt />
             </p>
           </div>

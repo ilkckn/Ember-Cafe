@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { RiMenu5Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleReSize = () => {
@@ -65,7 +66,7 @@ const Navbar = () => {
             </div>
             <div className="reserve-btn-mobileIcon">
               <RiMenu5Line onClick={toggleMobileMenu} />
-              <button>reserve</button>
+              <button onClick={() => navigate("/contact")}>reserve</button>
             </div>
 
             <div className="mobile-menu-container">

@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import "./Landing.css";
 import CommunitySection from "./CommunitySection";
 import Highlights from "./Highlights";
-import "./Landing.css";
 import Serenity from "./Serenity";
 import VisitUs from "./VisitUs";
 
 const Landing = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="landing-container">
       <div className="container">
@@ -21,8 +24,8 @@ const Landing = () => {
               Cafe, every cup tells a story.
             </p>
             <div className="btns">
-              <button>explore menu</button>
-              <button>our story</button>
+              <button onClick={() => navigate("/menu")}>explore menu</button>
+              <button onClick={() => navigate("/story")}>our story</button>
             </div>
           </div>
           <div className="hero-right">

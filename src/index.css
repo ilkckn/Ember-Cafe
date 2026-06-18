@@ -31,6 +31,8 @@
   --fw-body-bold: 700;
   --fw-body-extrabold: 800;
 
+  --surface-subtle: #f3eae1;
+
   /* ------Primary------ */
   --primary-t0: #000000;
   --primary-t10: #2f1500;
@@ -59,19 +61,19 @@
   --secondary-t95: #ffede8;
   --secondary-t100: #ffffff;
 
-  /* ------Tertiary------ */
-  --tertiary-t0: #000000;
-  --tertiary-t10: #221b00;
-  --tertiary-t20: #3a3000;
-  --tertiary-t30: #534600;
-  --tertiary-t40: #6e5e0d;
-  --tertiary-t50: #887627;
-  --tertiary-t60: #a3903e;
-  --tertiary-t70: #bfab56;
-  --tertiary-t80: #dcc66e;
-  --tertiary-t90: #f9e287;
-  --tertiary-t95: #fff0bf;
-  --tertiary-t100: #ffffff;
+  /* ------Sand------ */
+  --sand-t0: #000000;
+  --sand-t10: #221b00;
+  --sand-t20: #3a3000;
+  --sand-t30: #534600;
+  --sand-t40: #6e5e0d;
+  --sand-t50: #887627;
+  --sand-t60: #a3903e;
+  --sand-t70: #bfab56;
+  --sand-t80: #dcc66e;
+  --sand-t90: #f9e287;
+  --sand-t95: #fff0bf;
+  --sand-t100: #ffffff;
 
   /* ------Neutral------ */
   --neutral-t0: #000000;
@@ -86,7 +88,7 @@
   --neutral-t90: #e6e2db;
   --neutral-t95: #f5f0e9;
   --neutral-t100: #ffffff;
-
+  
   /*------Background Caramel------*/
   --linen-t0: #000000;
   --linen-t10: #16120a;

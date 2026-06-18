@@ -1,0 +1,154 @@
+.find-your-table-container {
+  width: 100%;
+  min-height: 40dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-t50);
+
+  & > p {
+    font-size: 2.2rem;
+    font-weight: var(--fw-body-semibold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--cream-t70);
+  }
+
+  & > h1 {
+    font-size: 4rem;
+    font-weight: var(--fw-body-semibold);
+    letter-spacing: -0.1px;
+    text-transform: uppercase;
+    color: var(--cream-t95);
+    margin-block: 1.5rem;
+  }
+
+  & > span {
+    font-size: 1.5rem;
+    font-weight: var(--fw-body-regular);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--cream-t95);
+    margin-bottom: 1rem;
+  }
+
+  .btns {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    & > button {
+      padding-inline: 5rem;
+      padding-block: 1.3rem;
+      font-size: 1.2rem;
+      font-weight: var(--fw-body-bold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid var(--cream-t95);
+      border-radius: 3rem;
+      background-color: var(--cream-t95);
+      color: var(--primary-t20);
+      cursor: pointer;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+
+      &:hover {
+        background-color: var(--cream-t80);
+      }
+    }
+
+    & > button:nth-child(2) {
+      border-color: var(--cream-t60);
+      background-color: var(--primary-t50);
+      color: var(--cream-t95);
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+
+      &:hover {
+        background-color: var(--primary-t40);
+      }
+    }
+  }
+}
+
+/* ============================================
+   RESPONSIVE — FindYourTable
+   ============================================ */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .find-your-table-container {
+    padding-inline: 3rem;
+    padding-block: 5rem;
+
+    & > h1 {
+      font-size: 3.4rem;
+    }
+  }
+}
+
+/* 820px / 768px — tablet */
+@media (max-width: 820px) {
+  .find-your-table-container {
+    padding-inline: 2.5rem;
+    padding-block: 5rem;
+    text-align: center;
+
+    & > p {
+      font-size: 2rem;
+    }
+
+    & > h1 {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    & > span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* ≤480px — telefonlar */
+@media (max-width: 480px) {
+  .find-your-table-container {
+    padding-inline: 2rem;
+    padding-block: 4.5rem;
+
+    & > p {
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+    }
+
+    & > h1 {
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+      margin-block: 1.5rem;
+    }
+
+    & > span {
+      font-size: 1.5rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .btns {
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 3rem;
+
+      & > button {
+        width: 100%;
+        padding-block: 1.6rem;
+        padding-inline: 2rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

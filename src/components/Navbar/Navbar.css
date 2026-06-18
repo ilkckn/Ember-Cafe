@@ -7,8 +7,9 @@
   height: 8rem;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
   z-index: 99;
+  background-color: var(--cream-t95);
 
   .container {
     background-color: var(--cream-t95);

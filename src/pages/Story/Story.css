@@ -1,6 +1,7 @@
 .story-container {
   background-color: var(--cream-t100);
   width: 100%;
+  padding-top: 8rem;
 
   .container {
     width: 100%;

@@ -220,6 +220,7 @@
           }
 
           textarea {
+            padding-inline: 1rem;
             min-height: 15rem;
             font-family: var(--font-body);
             font-size: 1.5rem;
@@ -227,6 +228,7 @@
             letter-spacing: 0.5px;
             background-color: transparent;
             color: var(--secondary-t40);
+            outline: none;
             border: none;
             border-bottom: 2px solid var(--parchment-t80);
             padding-block: 0.8rem;
@@ -246,6 +248,13 @@
           background-color: var(--secondary-t40);
           border: none;
           border-radius: 0.5rem;
+          margin: 1rem;
+        }
+        .success {
+          color: var(--secondary-t40);
+          font-size: 1.5rem;
+          font-weight: var(--fw-body-medäum);
+          letter-spacing: 1px;
         }
       }
 

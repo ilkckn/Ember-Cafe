@@ -2,6 +2,11 @@ import "./CuratedSelection.css";
 import { FaAngleRight } from "react-icons/fa6";
 
 const CuratedSelection = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <section className="curated-selection-container">
       <div className="header">
@@ -21,7 +26,7 @@ const CuratedSelection = () => {
             </p>
             <div className="price-detail">
               <p>€ 10.00</p>
-              <button>
+              <button onClick={scrollToTop}>
                 view details <FaAngleRight />
               </button>
             </div>
@@ -40,7 +45,7 @@ const CuratedSelection = () => {
             </p>
             <div className="price-detail">
               <p>€ 16.50</p>
-              <button>
+              <button onClick={scrollToTop}>
                 view details <FaAngleRight />
               </button>
             </div>

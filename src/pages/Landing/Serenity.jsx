@@ -22,11 +22,17 @@ const Serenity = () => {
           <div className="boxes-left">
             <img src="/landing/serenity-cafe.png" alt="" />
           </div>
-          
+
           <div className="boxes-right">
-            <img src="/landing/serenity-coffee-grinder.jpg" alt="" />
-            <img src="/landing/cafe-armchair.jpg" alt="" />
-            <img src="/landing/coffee-machine.jpg" alt="" />
+            <div className="image">
+              <img src="/landing/serenity-coffee-grinder.jpg" alt="" />
+            </div>
+            <div className="image">
+              <img src="/landing/cafe-armchair.jpg" alt="" />
+            </div>
+            <div className="image">
+              <img src="/landing/coffee-machine.jpg" alt="" />
+            </div>
           </div>
         </div>
       </div>

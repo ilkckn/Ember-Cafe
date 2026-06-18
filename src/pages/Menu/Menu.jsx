@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./Menu.css";
+import { useState } from "react";
 import menuData from "./MenuData.js";
 import { IoStarOutline } from "react-icons/io5";
 import CuratedSelection from "./CuratedSelection";

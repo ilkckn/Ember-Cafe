@@ -1,12 +1,14 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { RiMenu5Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleReSize = () => {
@@ -15,7 +17,6 @@ const Navbar = () => {
       }
     };
 
-    
     window.addEventListener("resize", handleReSize);
     return () => window.removeEventListener("resize", handleReSize);
   }, []);
@@ -48,25 +49,40 @@ const Navbar = () => {
             <div className="links">
               <ul>
                 <li>
-                  <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
+                  <NavLink to="/" onClick={scrollToTop}>
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/menu" onClick={scrollToTop}>Menu</NavLink>
+                  <NavLink to="/menu" onClick={scrollToTop}>
+                    Menu
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/story" onClick={scrollToTop}>Story</NavLink>
+                  <NavLink to="/story" onClick={scrollToTop}>
+                    Story
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/gallery" onClick={scrollToTop}>Gallery</NavLink>
+                  <NavLink to="/gallery" onClick={scrollToTop}>
+                    Gallery
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact" onClick={scrollToTop}>Contact</NavLink>
+                  <NavLink to="/contact" onClick={scrollToTop}>
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
             </div>
             <div className="reserve-btn-mobileIcon">
               <RiMenu5Line onClick={toggleMobileMenu} />
-              <button onClick={() => navigate("/contact")}>reserve</button>
+              <button
+                className={location.pathname === "/contact" ? "active" : ""}
+                onClick={() => navigate("/contact")}
+              >
+                {location.pathname === "/contact" ? "reserve" : "reserve now"}
+              </button>
             </div>
 
             <div className="mobile-menu-container">

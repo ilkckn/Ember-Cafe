@@ -135,6 +135,11 @@
             transform: scale(0.9);
             background-color: var(--primary-t50);
           }
+
+          &.active,
+          &.active:hover {
+            background-color: var(--secondary-t50);
+          }
         }
       }
     }

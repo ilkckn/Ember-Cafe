@@ -1,11 +1,14 @@
-import { useState } from "react";
 import "./SpecialCakes.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import menuData from "./MenuData.js";
 import { RiMedalLine } from "react-icons/ri";
 import { FiArrowRight,FiArrowLeft } from "react-icons/fi";
 
 const SpecialCakes = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const specialCakes = menuData.items.filter(
     (item) => item.category === "special-cakes",
@@ -44,7 +47,7 @@ const SpecialCakes = () => {
             <p>{currentCake.description}</p>
             <div className="price-order">
               <p>€ {currentCake.price} / slice</p>
-              <button>order now</button>
+              <button onClick={() => navigate("/contact")}>order now</button>
             </div>
           </div>
         </div>

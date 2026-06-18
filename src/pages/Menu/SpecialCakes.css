@@ -125,6 +125,7 @@
             text-transform: capitalize;
             border-bottom: 1px solid var(--secondary-t40);
             padding-bottom: 0.3rem;
+            cursor: pointer;
           }
         }
       }

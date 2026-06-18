@@ -5,6 +5,12 @@ import Philosophy from "./Philosophy";
 import JoinOurTable from "./JoinOurTable";
 
 const Story = () => {
+  const scrollToRoast = () => {
+    document.getElementById("roast-section")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+  
   return (
     <section className="story-container">
       <div className="container">
@@ -17,7 +23,7 @@ const Story = () => {
               in the quiet magic of a shared cup and the warmth of a community
               hearth.
             </p>
-            <button>explore the roast</button>
+            <button onClick={scrollToRoast}>explore the roast</button>
           </div>
         </div>
       </div>
@@ -25,7 +31,7 @@ const Story = () => {
       <div className="first-ember">
         <FirstEmber />
       </div>
-      <div className="philosophy">
+      <div className="philosophy" id="roast-section">
         <Philosophy />
       </div>
       <div className="community">

@@ -1,7 +1,8 @@
+import "./VisitUs.css";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import "./VisitUs.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { TbClockHour4 } from "react-icons/tb";
 import { FiPhone } from "react-icons/fi";
@@ -13,6 +14,7 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 const VisitUs = () => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (mapInstanceRef.current || !mapRef.current) {
@@ -80,10 +82,10 @@ const VisitUs = () => {
               </div>
             </div>
             <div className="btns">
-              <button>
+              <button onClick={() => navigate("/find-your-cafe")}>
                 <MdOutlineDirections /> get directions
               </button>
-              <button>contact us</button>
+              <button onClick={() => navigate("/contact")}>contact us</button>
             </div>
           </div>
           <div className="right">
